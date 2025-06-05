@@ -8,3 +8,5 @@ ng analytics off --global
 if [ ! -d node_modules ]; then
   npm ci
 fi
+
+ng build isc-shared-angular
