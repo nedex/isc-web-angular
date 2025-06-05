@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { IscSharedAngularComponent } from 'isc-shared-angular'
+import { LayoutComponent } from 'isc-shared-angular';
+import { FooterComponent } from './components/footer/footer.component';
+import { MainMenuComponent } from './components/main-menu/main-menu.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, IscSharedAngularComponent],
+  imports: [LayoutComponent, MainMenuComponent, FooterComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  title = 'isc-web-angular';
-}
+export class AppComponent {}

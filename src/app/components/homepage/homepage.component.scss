@@ -1,0 +1,21 @@
+@use '@angular/material' as mat;
+@use 'isc-shared-angular/variables' as variables;
+
+.page-content > *:not(:first-child) {
+  margin-top: 20px;
+}
+
+isc-embedded-video {
+  display: block;
+
+  ::ng-deep iframe {
+    @include mat.elevation(2);
+  }
+}
+
+.charity-logos {
+  img {
+    height: 150px;
+    max-width: fit-content;
+  }
+}
