@@ -5,8 +5,9 @@
     "ng": "ng",
     "start": "ng serve --host=0.0.0.0",
     "set-version": "export VERSION=\"$(git rev-parse --short HEAD)-$(date '+%Y%m%d')\" && sed -i \"s|<VERSION>|${VERSION}|\" ./src/environments/app-version.ts",
+    "build-shared-lib": "ng build isc-shared-angular",
     "build": "npm run set-version && ng build",
-    "build-isc": "npm run build -- --configuration production",
+    "build-isc": "npm run build-shared-lib && npm run build -- --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:isc-web-angular": "node dist/isc-web-angular/server/server.mjs"
