@@ -39,7 +39,7 @@
               "node_modules/roboto-fontface/css/roboto/roboto-fontface.css",
               "node_modules/@material-symbols/font-400/sharp.css",
               "node_modules/bootstrap/dist/css/bootstrap-grid.css",
-              "dist/isc-shared-angular/material.scss",
+              "src/material.scss",
               "dist/isc-shared-angular/material-glass.scss",
               "src/styles.scss"
             ],
@@ -115,7 +115,7 @@
               "node_modules/roboto-fontface/css/roboto/roboto-fontface.css",
               "node_modules/@material-symbols/font-400/sharp.css",
               "node_modules/bootstrap/dist/css/bootstrap-grid.css",
-              "dist/isc-shared-angular/material.scss",
+              "src/material.scss",
               "dist/isc-shared-angular/material-glass.scss",
               "src/styles.scss"
             ],

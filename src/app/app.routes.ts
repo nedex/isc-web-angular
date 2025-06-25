@@ -1,13 +1,28 @@
 import { Routes } from '@angular/router';
+import { ErrorPageComponent } from 'isc-shared-angular';
+import { BeneficenzaPageComponent } from './components/beneficenza-page/beneficenza-page.component';
+import { CommunityPageComponent } from './components/community-page/community-page.component';
+import { ContattiPageComponent } from './components/contatti-page/contatti-page.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 import { TermsAndConditionsComponent } from './components/terms-and-conditions/terms-and-conditions.component';
-import { ErrorPageComponent } from 'isc-shared-angular';
 
 export const routes: Routes = [
   {
     path: '',
     component: HomepageComponent,
+  },
+  {
+    path: 'community',
+    component: CommunityPageComponent,
+  },
+  {
+    path: 'beneficenza',
+    component: BeneficenzaPageComponent,
+  },
+  {
+    path: 'contatti',
+    component: ContattiPageComponent,
   },
   {
     path: 'privacy-policy',

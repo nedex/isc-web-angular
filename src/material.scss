@@ -1,0 +1,118 @@
+@use '@angular/material' as mat;
+@use 'isc-shared-angular/variables' as variables;
+
+@include mat.elevation-classes();
+@include mat.app-background();
+@include mat.typography-hierarchy(variables.$light-theme);
+
+body {
+  --mat-toolbar-container-background-color: #{mat.get-theme-color(
+      variables.$light-theme,
+      primary,
+      70
+    )};
+
+  color: #{mat.get-theme-color(variables.$light-theme, secondary, 20)};
+  background-color: var(--mat-app-background-color);
+
+  --mdc-text-button-label-text-color: #{mat.get-theme-color(variables.$light-theme, primary, 20)};
+
+  @include mat.core-theme(variables.$light-theme);
+
+  @include mat.button-theme(variables.$light-theme);
+  @include mat.card-theme(variables.$light-theme);
+  @include mat.icon-theme(variables.$light-theme);
+  @include mat.menu-theme(variables.$light-theme);
+  @include mat.progress-bar-theme(variables.$light-theme);
+  @include mat.slide-toggle-theme(variables.$light-theme);
+  @include mat.toolbar-theme(variables.$light-theme);
+  @include mat.tooltip-theme(variables.$light-theme);
+
+  mat-card a {
+    color: #{mat.get-theme-color(variables.$light-theme, secondary, 20)};
+  }
+
+  mat-card-header {
+    color: #{mat.get-theme-color(variables.$light-theme, secondary, 95)};
+    background-color: #{mat.get-theme-color(variables.$light-theme, secondary, 40)};
+
+    --mat-card-subtitle-text-color: #{mat.get-theme-color(variables.$light-theme, secondary, 95)};
+
+    --mdc-filled-button-container-color: #{mat.get-theme-color(
+        variables.$light-theme,
+        secondary,
+        50
+      )};
+
+    --mdc-chip-outline-color: #{mat.get-theme-color(variables.$light-theme, secondary, 80)};
+    --mdc-chip-label-text-color: #{mat.get-theme-color(variables.$light-theme, secondary, 95)};
+  }
+}
+
+body.dark {
+  color: #{mat.get-theme-color(variables.$dark-theme, primary, 90)};
+  background-color: var(--mat-app-background-color);
+
+  --mat-toolbar-container-background-color: #{mat.get-theme-color(
+      variables.$dark-theme,
+      primary,
+      30
+    )};
+
+  @include mat.core-color(variables.$dark-theme);
+
+  @include mat.button-color(variables.$dark-theme);
+  @include mat.card-color(variables.$dark-theme);
+  @include mat.icon-color(variables.$dark-theme);
+  @include mat.menu-color(variables.$dark-theme);
+  @include mat.progress-bar-color(variables.$dark-theme);
+  @include mat.slide-toggle-color(variables.$dark-theme);
+  @include mat.toolbar-color(variables.$dark-theme);
+  @include mat.tooltip-color(variables.$dark-theme);
+
+  mat-card a {
+    color: #{mat.get-theme-color(variables.$dark-theme, primary, 90)};
+  }
+
+  mat-card-header {
+    color: #{mat.get-theme-color(variables.$dark-theme, secondary, 95)};
+    background-color: #{mat.get-theme-color(variables.$dark-theme, secondary, 20)};
+
+    --mat-card-subtitle-text-color: #{mat.get-theme-color(variables.$dark-theme, secondary, 95)};
+
+    --mdc-filled-button-container-color: #{mat.get-theme-color(
+        variables.$dark-theme,
+        secondary,
+        60
+      )};
+
+    --mdc-chip-outline-color: #{mat.get-theme-color(variables.$dark-theme, secondary, 80)};
+    --mdc-chip-label-text-color: #{mat.get-theme-color(variables.$dark-theme, secondary, 95)};
+  }
+}
+
+.material-symbols-sharp {
+  font-variation-settings: 'FILL' 1;
+}
+
+.mdc-button.mat-button-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+
+  mat-icon {
+    margin-left: var(--mat-text-button-icon-spacing, 8px) !important;
+    margin-right: var(--mat-text-button-icon-offset, 0) !important;
+  }
+}
+
+.mat-mdc-card-header {
+  padding: 16px !important;
+}
+
+mat-card-header {
+  border-radius: inherit;
+}
+
+.mat-mdc-card-subtitle {
+  color: inherit;
+}

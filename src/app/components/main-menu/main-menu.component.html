@@ -4,7 +4,6 @@
     routerLinkActive="current-page"
     [routerLinkActiveOptions]="{ exact: true }"
     class="toolbar-title"
-    (click)="clicker$.next()"
   >
     <img
       height="40"
@@ -21,8 +20,10 @@
     <a
       href="https://fungos.italianspeedruncommunity.com"
       target="_blank"
-      >Proponi una run</a
     >
+      Proponi una run
+      <mat-icon style="font-size: 0.8em">open_in_new</mat-icon>
+    </a>
   </span>
 
   <span class="d-flex">

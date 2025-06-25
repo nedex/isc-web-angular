@@ -81,3 +81,26 @@ Viene utilizzato per il layout.
 **Nota:** per questioni di dimensione, nell'applicazione viene incluso solo il file `bootstrap-grid.css`, per cui alcune funzioni potrebbero non essere disponibili.
 
 [Grid](https://getbootstrap.com/docs/5.3/layout/css-grid/) - [Breakpoints](https://getbootstrap.com/docs/5.3/layout/breakpoints/) - [Flex](https://getbootstrap.com/docs/5.3/utilities/flex/)
+
+## Creazione di nuove pagine
+
+Esempio per la pagina contatti:
+
+```bash
+ng g component components/contatti-page --skip-tests
+```
+
+Modificare il file `app.routes.ts`:
+
+```typescript
+import { ContattiPageComponent } from './components/contatti-page/contatti-page.component';
+
+export const routes: Routes = [
+  ...
+    {
+    path: 'contatti',
+    component: ContattiPageComponent,
+  },
+  ...
+];
+```

@@ -1,0 +1,14 @@
+.page-content > *:not(:first-child) {
+  margin-top: 20px;
+}
+
+.charity-logo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 150px;
+    max-width: fit-content;
+  }
+}
