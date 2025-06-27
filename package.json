@@ -8,7 +8,8 @@
     "build-shared-lib": "ng build isc-shared-angular",
     "build:purge": "node build/purgecss.js",
     "build": "npm run set-version && ng build",
-    "build-isc": "npm run build-shared-lib && npm run build -- --configuration production && npm run build:purge",
+    "build-isc": "npm run build-shared-lib && npm run build && npm run build:purge",
+    "build-github": "npm run build-shared-lib && npm run build -- --base-href=/isc-web-angular/ && npm run build:purge",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:isc-web-angular": "node dist/isc-web-angular/server/server.mjs"
