@@ -6,8 +6,9 @@
     "start": "ng serve --host=0.0.0.0",
     "set-version": "export VERSION=\"$(git rev-parse --short HEAD)-$(date '+%Y%m%d')\" && sed -i \"s|<VERSION>|${VERSION}|\" ./src/environments/app-version.ts",
     "build-shared-lib": "ng build isc-shared-angular",
+    "build:purge": "node build/purgecss.js",
     "build": "npm run set-version && ng build",
-    "build-isc": "npm run build-shared-lib && npm run build -- --configuration production",
+    "build-isc": "npm run build-shared-lib && npm run build -- --configuration production && npm run build:purge",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:isc-web-angular": "node dist/isc-web-angular/server/server.mjs"
@@ -49,6 +50,7 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^19.2.0",
     "prettier": "^3.3.3",
+    "purgecss": "^7.0.2",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.32.0"
   }
