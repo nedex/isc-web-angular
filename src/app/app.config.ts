@@ -1,8 +1,9 @@
+import { provideHttpClient, withFetch } from '@angular/common/http';
 import {
   ApplicationConfig,
   inject,
   provideAppInitializer,
-  provideZoneChangeDetection,
+  provideExperimentalZonelessChangeDetection,
 } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer, provideClientHydration, withEventReplay } from '@angular/platform-browser';
@@ -22,9 +23,10 @@ function initializeIcons(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer)
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideExperimentalZonelessChangeDetection(),
     provideRouter(routes),
     provideClientHydration(withEventReplay()),
+    provideHttpClient(withFetch()),
     provideAppInitializer(() => {
       console.info(`Version: %c${appVersion.version}`, 'color: red');
 

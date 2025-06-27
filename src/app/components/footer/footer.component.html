@@ -1,12 +1,27 @@
 <div class="row footer p-2 justify-content-center">
   <div class="col-11 row no-gutters">
     <div class="row justify-content-between no-gutters">
-      <span class="col-auto col-sm-6 isc">
+      <span class="col-auto col-sm-4 isc">
         Italian Speedrun Community
         <br />
         C.F.: 97931990150
       </span>
-      <span class="col-auto col-sm-6 disclaimers">
+      <span class="col-3 d-md-flex d-none align-items-center justify-content-center">
+        @for (social of socials; track $index) {
+          <a
+            [href]="social.url"
+            target="_blank"
+            style="margin: 0 10px"
+          >
+            <mat-icon
+              [svgIcon]="social.icon"
+              [matTooltip]="social.tooltip"
+              matTooltipPosition="above"
+            ></mat-icon>
+          </a>
+        }
+      </span>
+      <span class="col-auto col-sm-4 disclaimers">
         <a routerLink="/terms-and-conditions">Termini di Servizio</a>
         <br />
         <a routerLink="/privacy-policy">Privacy Policy</a>
